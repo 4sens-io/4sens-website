@@ -88,7 +88,19 @@ main{padding-top:var(--nav-h)}
 .hinner{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1.3fr .9fr;gap:60px;align-items:center}
 @media(max-width:1000px){.hinner{grid-template-columns:1fr}.hvis{display:none}}
 .hvis{position:relative;aspect-ratio:1;max-width:460px;justify-self:end;width:100%}
-#hero3d{position:absolute;inset:0;width:100%!important;height:100%!important;display:block}
+.hvis .orb{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(255,255,255,.08);animation:rot 40s linear infinite}
+.hvis .orb.b{inset:12%;animation:rot 28s linear infinite reverse;border-color:rgba(201,245,70,.14)}
+.hvis .orb.c{inset:24%;animation:rot 18s linear infinite;border-style:solid;border-color:rgba(255,255,255,.04)}
+.hvis .cube{position:absolute;inset:28%;transform-style:preserve-3d;animation:sp 16s linear infinite}
+.hvis .fc{position:absolute;inset:0;border:1px solid var(--lime);background:rgba(7,7,10,.65);display:grid;place-items:center;font-family:var(--fd);font-size:48px;font-weight:700;color:var(--lime);letter-spacing:-.04em;backdrop-filter:blur(2px)}
+.hvis .fc.fx{transform:rotateY(90deg) translateZ(90px)}
+.hvis .fc.fy{transform:rotateY(-90deg) translateZ(90px)}
+.hvis .fc.fz{transform:translateZ(90px)}
+.hvis .fc.fzb{transform:rotateY(180deg) translateZ(90px)}
+.hvis .fc.ft{transform:rotateX(90deg) translateZ(90px)}
+.hvis .fc.fb{transform:rotateX(-90deg) translateZ(90px)}
+@keyframes sp{to{transform:rotateY(360deg) rotateX(15deg)}}
+@keyframes rot{to{transform:rotate(360deg)}}
 .hvis .dot{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--lime);box-shadow:0 0 20px var(--lime)}
 .hvis .dot.d1{top:8%;left:50%;animation:op 4s var(--e) infinite}
 .hvis .dot.d2{bottom:14%;left:20%;animation:op 4s var(--e) infinite 1.2s}
