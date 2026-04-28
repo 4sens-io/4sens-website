@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<BaseLayout
+  title="Migraciones a Shopify — WooCommerce, Magento, PrestaShop"
+  description="Migramos de WooCommerce, Magento, PrestaShop y plataformas custom a Shopify. Cero downtime. SEO intacto. Soporte 30 días post-migración."
+>
+  <div class="phead wrap">
+    <div class="eyebrow reveal">04 — Migraciones</div>
+    <h1 class="reveal d1" style="margin-top:20px;">Mueve tu tienda. No pierdas nada.</h1>
+    <p class="lead reveal d2">Migramos de WooCommerce, Magento, PrestaShop y plataformas custom a Shopify. Cero downtime. SEO intacto.</p>
+  </div>
+
+  <section class="sec wrap">
+    <div class="migf reveal">
+      <svg width="100%" viewBox="0 0 800 240" style="max-width:780px;">
+        <g font-family="Syne" font-weight="600" fill="#fff" font-size="20">
+          <text x="40" y="60">WooCommerce</text><text x="40" y="120">Magento</text><text x="40" y="180">PrestaShop</text>
+        </g>
+        <g stroke="#C9F546" stroke-width="1.5" fill="none">
+          <path d="M220 54 Q 400 54 580 120" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.2s" repeatCount="indefinite"/></path>
+          <path d="M220 114 L 580 120"><animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.2s" repeatCount="indefinite"/></path>
+          <path d="M220 174 Q 400 174 580 120" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.2s" repeatCount="indefinite"/></path>
+        </g>
+        <g><rect x="580" y="90" width="180" height="60" rx="30" fill="#C9F546"/><text x="670" y="128" text-anchor="middle" font-family="Syne" font-weight="700" fill="#000" font-size="24">Shopify</text></g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Qué migramos</div><h2 style="margin-top:20px;max-width:16ch;">Todo lo que importa.</h2></div></div>
+    <ul class="cl reveal d1" style="max-width:820px;margin:0 auto;">
+      <li><span class="ci"></span>Catálogo de productos (variantes, metafields, SKUs)</li>
+      <li><span class="ci"></span>Clientes, direcciones y preferencias</li>
+      <li><span class="ci"></span>Historial de pedidos (últimos 3 años)</li>
+      <li><span class="ci"></span>Redirects 301 desde URLs legacy</li>
+      <li><span class="ci"></span>Reviews (Yotpo, Trustpilot, Loox)</li>
+      <li><span class="ci"></span>Suscripciones activas (ReCharge, Bold)</li>
+      <li><span class="ci"></span>Programa de fidelización y puntos</li>
+    </ul>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Garantías</div><h2 style="margin-top:20px;">Lo que firmamos contigo.</h2></div></div>
+    <div class="grid-3 reveal d1">
+      <div class="card"><div class="mono" style="color:var(--lime);font-size:36px;">0</div><h4 style="margin-top:12px;">Downtime</h4><p class="muted" style="margin-top:8px;">Switch DNS coordinado. Tu tienda sigue vendiendo hasta el último minuto.</p></div>
+      <div class="card"><div class="mono" style="color:var(--lime);font-size:36px;">100%</div><h4 style="margin-top:12px;">SEO preservado</h4><p class="muted" style="margin-top:8px;">Mapeo completo de URLs, canonical, sitemap y redirects 301.</p></div>
+      <div class="card"><div class="mono" style="color:var(--lime);font-size:36px;">30d</div><h4 style="margin-top:12px;">Soporte post-migración</h4><p class="muted" style="margin-top:8px;">Monitorizamos pedidos, 404s y métricas durante un mes.</p></div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Cronograma</div><h2 style="margin-top:20px;">Cómo se ve una migración.</h2></div></div>
+    <div class="gantt reveal d1">
+      <div class="gr"><div class="l">Auditoría</div><div class="gb" style="width:14%;"><span>S1</span></div></div>
+      <div class="gr"><div class="l">Mapping</div><div class="gb" style="width:18%;margin-left:14%;"><span>S2</span></div></div>
+      <div class="gr"><div class="l">Theme build</div><div class="gb" style="width:40%;margin-left:20%;"><span>S3–S6</span></div></div>
+      <div class="gr"><div class="l">Data import</div><div class="gb" style="width:25%;margin-left:55%;"><span>S7</span></div></div>
+      <div class="gr"><div class="l">QA</div><div class="gb" style="width:15%;margin-left:72%;"><span>S8</span></div></div>
+      <div class="gr"><div class="l">Go-live</div><div class="gb" style="width:8%;margin-left:88%;"><span>S9</span></div></div>
+    </div>
+  </section>
+
+  <CTA heading="¿Listos para mover tu tienda?" sub="Auditamos tu plataforma actual sin coste y te damos un plan detallado." label="Planificar migración"/>
+</BaseLayout>

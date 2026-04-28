@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Nosotros — 4sens Agency",
+  "url": "https://4sens.io/nosotros"
+};
+---
+
+<BaseLayout
+  title="Nosotros — 4sens Agency | Shopify Partner desde 2020"
+  description="4sens es un estudio solo-founder especializado en Shopify. Pablo Herrero, ex-Shopify Theme Reviewer, Shopify Plus Expert certificado. Madrid, Barcelona, Lisboa."
+  schema={schema}
+>
+  <div class="phead wrap">
+    <div class="eyebrow reveal">Nosotros</div>
+    <h1 class="reveal d1" style="margin-top:20px;">Somos 4sens. Hacemos crecer tiendas Shopify.</h1>
+  </div>
+
+  <section class="sec wrap">
+    <div class="reveal" style="max-width:920px;">
+      <p style="font-family:var(--fd);font-size:clamp(22px,2.4vw,32px);line-height:1.3;font-weight:400;letter-spacing:-.02em;color:#E4E4EE;">Empezamos en 2020 con una convicción: <em style="font-style:normal;color:var(--lime);">el commerce es un problema de operaciones, no de diseño</em>. Cada semana abrimos menos Figmas y más hojas de cálculo. Cada revisión empieza por un número — el que al cliente le cuesta el sueño — y termina en un release que lo mueve.</p>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Fundador</div><h2 style="margin-top:20px;max-width:18ch;">Una persona. Una red de colaboradores.</h2></div><p>4sens opera como estudio solo-founder con colaboradores seleccionados por proyecto. Menos overhead. Más foco.</p></div>
+    <div class="split reveal d1" style="align-items:center;">
+      <div class="ph t" style="aspect-ratio:4/5;min-height:420px;"><span class="l">Foto · Founder</span></div>
+      <div>
+        <div class="eyebrow nd">Founder</div>
+        <h3 style="margin-top:14px;font-size:clamp(28px,3.4vw,44px);">Pablo Herrero</h3>
+        <p style="margin-top:18px;color:#C4C4CE;font-size:17px;line-height:1.7;">Desarrollador Shopify desde 2016. Ex-Shopify Theme Reviewer. Funda 4sens en 2020 tras 4 años en agencias DTC. Hoy lidera todos los proyectos de principio a fin con un equipo rotatorio de especialistas colaboradores.</p>
+        <ul class="cl" style="margin-top:24px;">
+          <li><span class="ci"></span>Shopify Plus Expert certificado</li>
+          <li><span class="ci"></span>+120 proyectos lanzados</li>
+          <li><span class="ci"></span>Liquid, Hydrogen y Functions</li>
+          <li><span class="ci"></span>Red de 14 colaboradores activos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Valores</div><h2 style="margin-top:20px;max-width:14ch;">Cuatro reglas. No negociables.</h2></div></div>
+    <div class="grid-4 reveal d1">
+      <div class="card"><div class="mono" style="color:var(--lime);font-size:36px;">01</div><h4 style="margin-top:12px;">Números primero</h4><p class="muted" style="margin-top:10px;">Cada decisión se justifica con un KPI o no se toma.</p></div>
+      <div class="card"><div class="mono" style="color:var(--lime);font-size:36px;">02</div><h4 style="margin-top:12px;">Cero bullshit</h4><p class="muted" style="margin-top:10px;">Si algo no va a funcionar, lo decimos el lunes.</p></div>
+      <div class="card"><div class="mono" style="color:var(--lime);font-size:36px;">03</div><h4 style="margin-top:12px;">Código legible</h4><p class="muted" style="margin-top:10px;">Tu dev interno debe poder mantenerlo sin nosotros.</p></div>
+      <div class="card"><div class="mono" style="color:var(--lime);font-size:36px;">04</div><h4 style="margin-top:12px;">Pocos clientes</h4><p class="muted" style="margin-top:10px;">3–4 proyectos nuevos por trimestre. Lo demás es ruido.</p></div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Timeline</div><h2 style="margin-top:20px;">La agencia, año a año.</h2></div></div>
+    <div class="tlh reveal d1"><div class="tli">
+      <div class="ti"><div class="dot"></div><div class="y">2020</div><h5>Fundación</h5><p>4 socios. Un loft en Madrid. 3 clientes heredados.</p></div>
+      <div class="ti"><div class="dot"></div><div class="y">2021</div><h5>Shopify Partners</h5><p>Certificación oficial y primer proyecto Plus.</p></div>
+      <div class="ti"><div class="dot"></div><div class="y">2022</div><h5>Crece el equipo</h5><p>12 personas. Apertura a Barcelona. 30 proyectos.</p></div>
+      <div class="ti"><div class="dot"></div><div class="y">2023</div><h5>Plus Expert</h5><p>Certificación Plus Partner. 4 proyectos enterprise.</p></div>
+      <div class="ti"><div class="dot"></div><div class="y">2024</div><h5>+120 proyectos</h5><p>Cruzamos €40M GMV. Apertura en Lisboa.</p></div>
+      <div class="ti"><div class="dot"></div><div class="y">2026</div><h5>Hoy</h5><p>24 personas. 3 oficinas. 4–5 lanzamientos al trimestre.</p></div>
+    </div></div>
+  </section>
+</BaseLayout>

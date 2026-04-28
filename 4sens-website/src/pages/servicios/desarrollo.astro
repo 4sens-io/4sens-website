@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+
+const liquidExample = `{% schema %}
+{
+  "name": "Product grid",
+  "settings": [
+    { "type": "range", "id": "cols",
+      "min": 2, "max": 5, "default": 4 },
+    { "type": "checkbox", "id": "show_vendor" }
+  ],
+  "presets": [{ "name": "Default" }]
+}
+{% endschema %}`;
+---
+
+<BaseLayout
+  title="Desarrollo Shopify a Medida — Themes, Apps y Hydrogen"
+  description="Themes 2.0, apps privadas y arquitecturas headless en Hydrogen. Código que tu equipo podrá mantener en tres años sin reescribir."
+  hasInteractions={true}
+>
+  <div class="phead wrap">
+    <div class="eyebrow reveal">01 — Desarrollo Shopify</div>
+    <h1 class="reveal d1" style="margin-top:20px;">Shopify que funciona como debe.</h1>
+    <p class="lead reveal d2">Themes, apps, integraciones y arquitectura headless. Código que tu equipo podrá mantener mañana.</p>
+  </div>
+
+  <section class="sec wrap">
+    <div class="tabs" id="devTabs">
+      <button data-tab="themes" class="active">Themes</button>
+      <button data-tab="apps">Apps</button>
+      <button data-tab="liquid">Liquid</button>
+      <button data-tab="integrations">Integraciones</button>
+    </div>
+    <div class="tabp active" data-tab="themes">
+      <div>
+        <h3>Themes 2.0 a medida.</h3>
+        <p class="lead" style="margin-top:16px;">Construidos sobre Dawn u Online Store 2.0, con secciones editables y un sistema de diseño que tu equipo puede extender.</p>
+        <ul class="cl" style="margin-top:28px;">
+          <li><span class="ci"></span>Secciones modulares reutilizables</li>
+          <li><span class="ci"></span>Performance: LCP &lt; 1.2s</li>
+          <li><span class="ci"></span>Accesibilidad WCAG AA</li>
+          <li><span class="ci"></span>Documentación técnica incluida</li>
+        </ul>
+      </div>
+      <div class="mock">
+        <div class="mbar"><div class="dots"><i></i><i></i><i></i></div>tienda.myshopify.com/admin</div>
+        <div class="mbody" data-wm="DAWN"><div class="mhero"><div><h5>Theme 2.0</h5><p>31 secciones · 12 bloques</p><div class="mbtn">Personalizar →</div></div><div></div></div></div>
+      </div>
+    </div>
+    <div class="tabp" data-tab="apps">
+      <div>
+        <h3>Apps privadas y públicas.</h3>
+        <p class="lead" style="margin-top:16px;">Apps embebidas en Shopify Admin con Polaris y Remix. Para lo que no existe en el App Store — o lo que existe pero no encaja.</p>
+        <ul class="cl" style="margin-top:28px;">
+          <li><span class="ci"></span>Remix + Polaris + App Bridge</li>
+          <li><span class="ci"></span>Webhooks y GraphQL Admin API</li>
+          <li><span class="ci"></span>Billing API &amp; OAuth</li>
+          <li><span class="ci"></span>Publicación en el App Store</li>
+        </ul>
+      </div>
+      <div class="mock">
+        <div class="mbar"><div class="dots"><i></i><i></i><i></i></div>apps/bundle-builder</div>
+        <div class="mbody" data-wm="APP"><div class="mhero"><div><h5>Bundle Builder</h5><p>App privada · 4 merchants</p><div class="mbtn">Instalar →</div></div><div></div></div></div>
+      </div>
+    </div>
+    <div class="tabp" data-tab="liquid">
+      <div>
+        <h3>Liquid sin deuda técnica.</h3>
+        <p class="lead" style="margin-top:16px;">Escribimos Liquid como si lo fueras a leer en 3 años. Variables nombradas, secciones atómicas, snippets con contrato claro.</p>
+        <ul class="cl" style="margin-top:28px;">
+          <li><span class="ci"></span>Convención sección → snippet → schema</li>
+          <li><span class="ci"></span>Linting con Theme Check</li>
+          <li><span class="ci"></span>Fragment cache en renders costosos</li>
+          <li><span class="ci"></span>Code reviews antes de merge</li>
+        </ul>
+      </div>
+      <div class="mock" style="background:#0d0d12;padding:24px;">
+        <pre style="font-family:var(--fm);font-size:12px;color:var(--lime);line-height:1.6;margin:0;" set:text={liquidExample}></pre>
+      </div>
+    </div>
+    <div class="tabp" data-tab="integrations">
+      <div>
+        <h3>Integraciones que no se rompen.</h3>
+        <p class="lead" style="margin-top:16px;">ERPs, PIMs, OMSs, sistemas B2B. Conectamos Shopify con tu backoffice sin middleware inflado.</p>
+        <ul class="cl" style="margin-top:28px;">
+          <li><span class="ci"></span>SAP, Odoo, NetSuite, Holded</li>
+          <li><span class="ci"></span>Flow + AWS Lambda para jobs async</li>
+          <li><span class="ci"></span>Webhook retry &amp; dead letter queue</li>
+          <li><span class="ci"></span>Logs observables en Datadog</li>
+        </ul>
+      </div>
+      <div class="dash" style="grid-template-columns:1fr;">
+        <div class="dt"><div class="l">Shopify ↔ Odoo</div><div class="v">99.97%</div><div class="dl">uptime 90d</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Proceso</div><h2 style="margin-top:20px;">Del ticket al release.</h2></div></div>
+    <div class="grid-4 reveal d1">
+      <div class="card"><div style="font-family:var(--fm);color:var(--lime);margin-bottom:16px;">01</div><h4>Discovery técnico</h4><p class="muted" style="margin-top:10px;">Auditamos el theme actual, apps instaladas y arquitectura de datos.</p></div>
+      <div class="card"><div style="font-family:var(--fm);color:var(--lime);margin-bottom:16px;">02</div><h4>Setup &amp; branching</h4><p class="muted" style="margin-top:10px;">Dev/staging/prod con Shopify CLI, GitHub Actions y previews por PR.</p></div>
+      <div class="card"><div style="font-family:var(--fm);color:var(--lime);margin-bottom:16px;">03</div><h4>Build iterativo</h4><p class="muted" style="margin-top:10px;">Sprints de 2 semanas, demos cada viernes, release cada martes.</p></div>
+      <div class="card"><div style="font-family:var(--fm);color:var(--lime);margin-bottom:16px;">04</div><h4>Handover</h4><p class="muted" style="margin-top:10px;">Documentación, traspaso y 30 días de soporte post-launch.</p></div>
+    </div>
+  </section>
+
+  <CTA heading="Envíanos tu brief técnico." sub="Respondemos con un estimado realista en 48h." label="Hablar con dev"/>
+</BaseLayout>

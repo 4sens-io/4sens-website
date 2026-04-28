@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Casos de éxito — 4sens Agency",
+  "description": "Casos de éxito de proyectos Shopify. Resultados reales para marcas reales.",
+  "url": "https://4sens.io/casos"
+};
+---
+
+<BaseLayout
+  title="Casos de Éxito Shopify — Resultados Reales"
+  description="Seis casos de éxito en Shopify. Marcas de beauty, fashion, food, tech y home que escalaron con 4sens. Resultados medibles con números reales."
+  hasInteractions={true}
+  schema={schema}
+>
+  <div class="phead c wrap">
+    <div class="eyebrow reveal">Casos de éxito</div>
+    <h1 class="reveal d1" style="margin-top:20px;">Resultados reales. Marcas reales.</h1>
+    <p class="lead reveal d2">Seis historias donde el trabajo se tradujo en un número que el CFO pudo ver.</p>
+  </div>
+
+  <section class="sec wrap">
+    <div class="tag-row reveal" id="caseFilters" style="margin-bottom:48px;">
+      <span class="tag active" data-filter="all">Todos</span>
+      <span class="tag" data-filter="fashion">Fashion</span>
+      <span class="tag" data-filter="beauty">Beauty</span>
+      <span class="tag" data-filter="food">Food</span>
+      <span class="tag" data-filter="tech">Tech</span>
+      <span class="tag" data-filter="home">Home</span>
+    </div>
+    <div class="grid-3 reveal d1" id="caseGrid">
+      <article class="cc" data-cat="beauty"><a href="/casos/noura" style="display:contents"><div class="th c-noura"><div class="tags"><span class="ts">Beauty</span><span class="ts">Dev + CRO</span></div><div class="bword">NOURA</div><div class="ov"><p>De WooCommerce 6-cifras a Shopify 7-cifras en 11 meses.</p></div></div><div class="info"><div><div class="sec">Skincare</div><h4>NOURA</h4></div><div class="mh">+312%</div></div></a></article>
+      <article class="cc" data-cat="fashion"><div class="th c-veldt"><div class="tags"><span class="ts">Fashion</span><span class="ts">Growth</span></div><div class="bword">VELDT</div><div class="ov"><p>Plus migration + subscription. ×2.4 LTV.</p></div></div><div class="info"><div><div class="sec">Accesorios de piel</div><h4>VELDT</h4></div><div class="mh">×2.4</div></div></article>
+      <article class="cc" data-cat="tech"><div class="th c-kraim"><div class="tags"><span class="ts">Tech</span><span class="ts">Hydrogen</span></div><div class="bword">KRAIM</div><div class="ov"><p>Storefront headless. LCP de 3.8s a 0.9s.</p></div></div><div class="info"><div><div class="sec">Gadgets</div><h4>KRAIM</h4></div><div class="mh">−76%</div></div></article>
+      <article class="cc" data-cat="food"><div class="th c-soleil"><div class="tags"><span class="ts">Food</span><span class="ts">Retention</span></div><div class="bword">SOLEIL</div><div class="ov"><p>Subscriptions + loyalty. Repeat rate 19% → 47%.</p></div></div><div class="info"><div><div class="sec">Aceite de oliva</div><h4>SOLEIL</h4></div><div class="mh">+28pp</div></div></article>
+      <article class="cc" data-cat="home"><div class="th c-orbis"><div class="tags"><span class="ts">Home</span><span class="ts">Plus</span></div><div class="bword">ORBIS</div><div class="ov"><p>Multistore 4 mercados. Checkout duty-inclusive.</p></div></div><div class="info"><div><div class="sec">Decoración</div><h4>ORBIS</h4></div><div class="mh">×4</div></div></article>
+      <article class="cc" data-cat="fashion"><div class="th c-maren"><div class="tags"><span class="ts">Fashion</span><span class="ts">CRO</span></div><div class="bword">MAREN</div><div class="ov"><p>18 experimentos en PDP. +24% CR, AOV +€31.</p></div></div><div class="info"><div><div class="sec">Swimwear</div><h4>MAREN</h4></div><div class="mh">+24%</div></div></article>
+    </div>
+  </section>
+
+  <CTA heading="¿El próximo caso es el tuyo?" sub="Aceptamos 3–4 proyectos nuevos por trimestre." label="Solicitar plaza"/>
+</BaseLayout>

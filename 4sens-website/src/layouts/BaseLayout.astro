@@ -1,0 +1,97 @@
+---
+import '../styles/base.css';
+import '../styles/layout.css';
+import '../styles/components.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: string;
+  hasParticles?: boolean;
+  hasInteractions?: boolean;
+  hasHero3d?: boolean;
+  schema?: object;
+}
+
+const {
+  title,
+  description = 'Agencia Shopify Partner especializada en desarrollo, CRO, growth y migraciones. +120 proyectos. +€40M GMV generado.',
+  image = '/og-default.png',
+  type = 'website',
+  hasParticles = false,
+  hasInteractions = false,
+  hasHero3d = false,
+  schema,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://4sens.io');
+const siteName = '4sens Agency';
+const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
+---
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+  <!-- Primary SEO -->
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}/>
+  <link rel="canonical" href={canonicalURL}/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="4sens Agency"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content={type}/>
+  <meta property="og:url" content={canonicalURL}/>
+  <meta property="og:title" content={fullTitle}/>
+  <meta property="og:description" content={description}/>
+  <meta property="og:image" content={new URL(image, 'https://4sens.io')}/>
+  <meta property="og:site_name" content={siteName}/>
+  <meta property="og:locale" content="es_ES"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content={fullTitle}/>
+  <meta name="twitter:description" content={description}/>
+  <meta name="twitter:image" content={new URL(image, 'https://4sens.io')}/>
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- JSON-LD -->
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)}/>}
+</head>
+<body>
+  <div class="cring" id="cring"></div>
+  <div class="cdot" id="cdot"></div>
+  <div class="prog" id="prog"></div>
+
+  <Nav/>
+
+  <main>
+    <slot/>
+  </main>
+
+  <a class="fab" href="/contacto">Iniciar proyecto <span class="arr">→</span></a>
+
+  <Footer/>
+
+  <script is:inline src="/scripts/cursor.js"></script>
+  <script is:inline src="/scripts/nav.js"></script>
+  <script is:inline src="/scripts/reveal.js"></script>
+  {hasParticles && <script is:inline src="/scripts/particles.js"></script>}
+  {hasInteractions && <script is:inline src="/scripts/interactions.js"></script>}
+  {hasHero3d && <script is:inline type="module" src="/scripts/hero3d.js"></script>}
+</body>
+</html>

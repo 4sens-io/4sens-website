@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Recursos Shopify — Guías, Checklists y Calculadoras | 4sens"
+  description="Guías, checklists y calculadoras de Shopify gratis, sin email wall. Auditoría en 60 minutos, migración SEO, email flows y calculadora de ROAS."
+  hasInteractions={true}
+>
+  <div class="phead wrap">
+    <div class="eyebrow reveal">Recursos</div>
+    <h1 class="reveal d1" style="margin-top:20px;">Herramientas y conocimiento.</h1>
+    <p class="lead reveal d2">Guías, checklists y calculadoras gratis, sin email wall.</p>
+  </div>
+
+  <section class="sec wrap">
+    <div class="tabs" id="resTabs">
+      <button class="active" data-tab="guides">Guías</button>
+      <button data-tab="check">Checklists</button>
+      <button data-tab="calc">Calculadoras</button>
+    </div>
+
+    <div class="tabp active" data-tab="guides" style="grid-template-columns:repeat(3,1fr);">
+      <div class="card"><div class="eyebrow nd" style="color:var(--lime);">PDF · 34 páginas</div><h4 style="margin-top:14px;">Auditoría Shopify en 60 minutos.</h4><p class="muted" style="margin-top:10px;font-size:14px;">El framework que usamos para evaluar cualquier tienda.</p><a class="tlink" style="margin-top:18px;" href="#">Descargar ↓</a></div>
+      <div class="card"><div class="eyebrow nd" style="color:var(--lime);">PDF · 22 páginas</div><h4 style="margin-top:14px;">Migración a Shopify sin perder SEO.</h4><p class="muted" style="margin-top:10px;font-size:14px;">Checklist completo y plantilla de mapeo de URLs.</p><a class="tlink" style="margin-top:18px;" href="#">Descargar ↓</a></div>
+      <div class="card"><div class="eyebrow nd" style="color:var(--lime);">PDF · 18 páginas</div><h4 style="margin-top:14px;">Email flows esenciales en Klaviyo.</h4><p class="muted" style="margin-top:10px;font-size:14px;">9 flows y su impacto promedio en revenue.</p><a class="tlink" style="margin-top:18px;" href="#">Descargar ↓</a></div>
+    </div>
+
+    <div class="tabp" data-tab="check" style="grid-template-columns:1fr;">
+      <div class="acc">
+        <div class="accit"><button class="acch">Pre-launch checklist (38 items)<span class="plus">+</span></button><div class="accb"><div class="accbi"><p>Todo lo que revisamos antes del go-live: redirects, analytics, legal, checkout, pagos, email, monitoring.</p><ul><li>DNS + SSL</li><li>Analytics + Pixels</li><li>Legal + Cookies</li><li>Payments + Tax</li></ul></div></div></div>
+        <div class="accit"><button class="acch">Auditoría de performance (21 items)<span class="plus">+</span></button><div class="accb"><div class="accbi"><p>Core Web Vitals, assets, third-party scripts, estructura del theme.</p><ul><li>LCP / INP / CLS</li><li>JS budget</li><li>Third-party audit</li></ul></div></div></div>
+        <div class="accit"><button class="acch">CRO mínimo viable (12 items)<span class="plus">+</span></button><div class="accb"><div class="accbi"><p>Lo primero que miramos en cualquier PDP/cart/checkout.</p><ul><li>PDP clarity</li><li>Trust signals</li><li>Cart recovery</li></ul></div></div></div>
+      </div>
+    </div>
+
+    <div class="tabp" data-tab="calc" style="grid-template-columns:1fr;">
+      <div class="calc">
+        <div>
+          <h3>Calculadora de ROAS.</h3>
+          <p class="muted" style="margin-top:12px;">Introduce los datos. Cálculo en vivo.</p>
+          <div class="fr" style="margin-top:24px;"><label>Inversión (€)</label><input class="field" type="number" id="roasSpend" value="10000"/></div>
+          <div class="fr"><label>Ingresos atribuidos (€)</label><input class="field" type="number" id="roasRev" value="38000"/></div>
+          <div class="fr"><label>Coste producto (€)</label><input class="field" type="number" id="roasCogs" value="12000"/></div>
+        </div>
+        <div class="res">
+          <div class="l mono" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);">ROAS</div>
+          <div class="v" id="roasOut">×3.80</div>
+          <div class="l">Por cada € invertido, ×3.80 de ingreso bruto.</div>
+          <div style="margin-top:22px;padding-top:22px;border-top:1px solid var(--border);">
+            <div class="l mono" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);">POAS (bruto)</div>
+            <div class="v" id="poasOut" style="font-size:38px;">×1.60</div>
+            <div class="l">ROAS sobre beneficio bruto — el KPI que importa.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fcta">
+    <h2 class="reveal">Una carta al mes. Cero ruido.</h2>
+    <p class="reveal d1">Aprendizajes de los proyectos en curso.</p>
+    <form class="news reveal d2" onsubmit="event.preventDefault();this.querySelector('button').textContent='Apuntado ✓';" style="margin:36px auto 0;">
+      <input type="email" placeholder="tu@email.com" required/>
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+</BaseLayout>

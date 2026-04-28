@@ -1,0 +1,22 @@
+---
+interface Props {
+  heading: string;
+  sub?: string;
+  label?: string;
+  href?: string;
+}
+const {
+  heading,
+  sub,
+  label = 'Iniciar proyecto',
+  href = '/contacto',
+} = Astro.props;
+---
+
+<section class="fcta">
+  <h2 class="reveal">{heading}</h2>
+  {sub && <p class="reveal d1">{sub}</p>}
+  <a class={`btn btn-p btn-lg reveal ${sub ? 'd2' : 'd1'}`} href={href}>
+    {label} <span class="arr">→</span>
+  </a>
+</section>

@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<BaseLayout
+  title="Consultoría CRO, UX y Analytics — 4sens Agency"
+  description="CRO, UX research y analytics para tiendas Shopify. Auditorías de conversión, A/B testing y dashboards que dicen qué hacer, no solo qué pasó."
+  hasInteractions={true}
+>
+  <div class="phead wrap">
+    <div class="eyebrow reveal">02 — Consultoría 360</div>
+    <h1 class="reveal d1" style="margin-top:20px;">Datos que convierten. Estrategia que escala.</h1>
+    <p class="lead reveal d2">CRO, UX research y analytics. Un solo equipo que descubre la palanca, diseña el experimento y lo cuantifica.</p>
+  </div>
+
+  <section class="sec wrap">
+    <div class="grid-3 reveal">
+      <div class="pil">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20V4M3 20h18M7 16l4-6 4 3 5-7"/></svg></div>
+        <h4>CRO</h4>
+        <p>Hipótesis priorizadas, A/B testing en Shopify Plus y Convert.com. Del funnel a la ficha de producto.</p>
+      </div>
+      <div class="pil">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-5-5"/></svg></div>
+        <h4>UX Research</h4>
+        <p>Usability tests, diary studies, heatmaps y entrevistas 1:1. Escuchamos al cliente antes de decidir.</p>
+      </div>
+      <div class="pil">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M4 10h16M10 4v16"/></svg></div>
+        <h4>Analytics</h4>
+        <p>GA4, Shopify Analytics, Looker Studio. Dashboards que dicen qué hacer, no solo qué pasó.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Dashboard en vivo</div><h2 style="margin-top:20px;max-width:18ch;">La salud de tu tienda, en una pantalla.</h2></div><p>Ejemplo de dashboard de cliente. Métricas en tiempo real con alertas.</p></div>
+    <div class="dash reveal d1">
+      <div class="dt"><div class="l">Conversión</div><div class="v"><span class="cnt" data-to="3.42" data-dec="2">0</span>%</div><div class="dl">+0.74pp vs. mes anterior</div></div>
+      <div class="dt"><div class="l">Bounce rate</div><div class="v"><span class="cnt" data-to="28.1" data-dec="1">0</span>%</div><div class="dl">−6.4pp vs. mes anterior</div></div>
+      <div class="dt"><div class="l">AOV</div><div class="v">€<span class="cnt" data-to="84">0</span></div><div class="dl">+€12 vs. mes anterior</div></div>
+      <div class="dt w"><div class="l">Conversión semanal (90d)</div>
+        <div class="chart" id="consChart"><svg viewBox="0 0 600 140" preserveAspectRatio="none"><defs><linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C9F546" stop-opacity="0.25"/><stop offset="100%" stop-color="#C9F546" stop-opacity="0"/></linearGradient></defs><path class="g" d="M0 35 L600 35 M0 70 L600 70 M0 105 L600 105"/><path class="ln" d="M0 110 C 60 100, 80 95, 130 85 S 220 80, 260 65 S 360 55, 400 60 S 490 35, 540 30 S 580 20, 600 18"/><path class="ar" d="M0 110 C 60 100, 80 95, 130 85 S 220 80, 260 65 S 360 55, 400 60 S 490 35, 540 30 S 580 20, 600 18 L 600 140 L 0 140 Z"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Metodología</div><h2 style="margin-top:20px;max-width:16ch;">Framework de experimentación.</h2></div></div>
+    <ul class="cl reveal d1" style="max-width:780px;margin:0 auto;">
+      <li><span class="ci"></span>Research cualitativo + cuantitativo (semanas 1–2)</li>
+      <li><span class="ci"></span>Backlog priorizado por PXL / ICE score</li>
+      <li><span class="ci"></span>Design de hipótesis con MDE y sample size</li>
+      <li><span class="ci"></span>Ejecución con tests A/B o MVT según tráfico</li>
+      <li><span class="ci"></span>Análisis Bayesiano + documentación del aprendizaje</li>
+      <li><span class="ci"></span>Iteración: ganadores al core, perdedores al archivo</li>
+    </ul>
+  </section>
+
+  <CTA heading="Auditoría gratuita de conversión." sub="60 minutos, 3 recomendaciones accionables, sin compromiso." label="Reservar auditoría"/>
+</BaseLayout>

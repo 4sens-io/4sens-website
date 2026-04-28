@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<BaseLayout
+  title="Growth & Performance Shopify — Paid, Email y Retención"
+  description="Paid media, email y retención bajo un único modelo de atribución. Cada euro invertido se rastrea hasta el pedido."
+  hasInteractions={true}
+>
+  <div class="phead wrap">
+    <div class="eyebrow reveal">03 — Growth &amp; Performance</div>
+    <h1 class="reveal d1" style="margin-top:20px;">Más tráfico. Mejor tráfico. Más ventas.</h1>
+    <p class="lead reveal d2">Paid, email y retención bajo un único modelo de atribución. Cada euro invertido se rastrea hasta el pedido.</p>
+  </div>
+
+  <section class="sec wrap">
+    <div class="grid-3 reveal">
+      <div class="pil">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+        <h4>Paid Media</h4>
+        <p>Meta, Google, TikTok, Pinterest. Creatividad, estructura de cuenta y buyer journey conectados.</p>
+      </div>
+      <div class="pil">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7l9-4 9 4"/></svg></div>
+        <h4>Email &amp; SMS</h4>
+        <p>Klaviyo, flows completos, segmentación RFM y creatividades que se abren.</p>
+      </div>
+      <div class="pil">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0zM12 8v4l3 2"/></svg></div>
+        <h4>Retención</h4>
+        <p>Subscriptions, loyalty y lifecycle marketing. Del first-time al LTV de 12 meses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Métricas en vivo</div><h2 style="margin-top:20px;">Dashboard de Growth.</h2></div></div>
+    <div class="dash reveal d1">
+      <div class="dt"><div class="l">ROAS blended</div><div class="v">×<span class="cnt" data-to="3.8" data-dec="1">0</span></div><div class="dl">+0.6 vs. target</div></div>
+      <div class="dt"><div class="l">CAC</div><div class="v">€<span class="cnt" data-to="24">0</span></div><div class="dl">−€9 vs. Q anterior</div></div>
+      <div class="dt"><div class="l">LTV 12m</div><div class="v">€<span class="cnt" data-to="186">0</span></div><div class="dl">LTV/CAC = 7.7</div></div>
+      <div class="dt"><div class="l">CTR Meta</div><div class="v"><span class="cnt" data-to="2.4" data-dec="1">0</span>%</div><div class="dl">+0.7pp con creatividades nuevas</div></div>
+      <div class="dt"><div class="l">Email revenue share</div><div class="v"><span class="cnt" data-to="31">0</span>%</div><div class="dl">+8pp post-flows</div></div>
+      <div class="dt"><div class="l">Repeat rate</div><div class="v"><span class="cnt" data-to="38">0</span>%</div><div class="dl">+12pp post-loyalty</div></div>
+    </div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sechead reveal"><div><div class="eyebrow">Antes / después</div><h2 style="margin-top:20px;">Un caso real.</h2></div><p>VELDT — 90 días de trabajo coordinado de paid + email.</p></div>
+    <div class="grid-2 reveal d1">
+      <div class="card"><div class="eyebrow nd">Antes</div><h3 style="margin-top:14px;">×1.9 ROAS</h3><p class="muted" style="margin-top:12px;">Cuenta Meta fragmentada en 32 adsets, sin segmentación de email, flows legacy.</p></div>
+      <div class="card" style="border-color:var(--lime);"><div class="eyebrow nd" style="color:var(--lime);">Después (90d)</div><h3 style="margin-top:14px;color:var(--lime);">×4.7 ROAS</h3><p class="muted" style="margin-top:12px;">Campañas ASC+ consolidadas, 8 flows Klaviyo, programa de recompras semestral.</p></div>
+    </div>
+  </section>
+
+  <CTA heading="Auditoría de cuentas + plan 90 días." sub="Sin coste. Te decimos qué cambiarías tú si fueras nosotros." label="Solicitar auditoría"/>
+</BaseLayout>

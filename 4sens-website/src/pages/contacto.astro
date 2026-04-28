@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contacto — 4sens Agency",
+  "url": "https://4sens.io/contacto"
+};
+---
+
+<BaseLayout
+  title="Contacto — Hablemos de tu Proyecto Shopify | 4sens"
+  description="Respondemos en menos de 24h con un rango de presupuesto y una hipótesis de trabajo. Madrid, Barcelona, Lisboa."
+  hasInteractions={true}
+  schema={schema}
+>
+  <div class="phead wrap">
+    <div class="eyebrow reveal">Contacto</div>
+    <h1 class="reveal d1" style="margin-top:20px;">Hablemos de tu proyecto.</h1>
+    <p class="lead reveal d2">Respondemos en menos de 24h con un rango de presupuesto y una hipótesis de trabajo.</p>
+  </div>
+
+  <section class="sec wrap">
+    <div class="split">
+      <form id="cf" class="reveal" novalidate>
+        <div class="fr"><label for="fn">Nombre</label><input class="field" id="fn" name="name" required/></div>
+        <div class="fr"><label for="fc">Empresa</label><input class="field" id="fc" name="company"/></div>
+        <div class="fr"><label for="fe">Email</label><input class="field" id="fe" name="email" type="email" required/></div>
+        <div class="fr">
+          <label for="ft">Tipo de proyecto</label>
+          <select class="field" id="ft" name="type" required>
+            <option value="">Selecciona…</option>
+            <option>Desarrollo Shopify</option>
+            <option>Consultoría 360</option>
+            <option>Growth &amp; Performance</option>
+            <option>Migración</option>
+            <option>Shopify Plus</option>
+            <option>No lo sé</option>
+          </select>
+        </div>
+        <div class="fr">
+          <label>Presupuesto estimado (€)</label>
+          <div class="rw">
+            <div class="rv" id="bOut">€ 15 000 – 30 000</div>
+            <input type="range" id="bud" min="0" max="7" step="1" value="2"/>
+            <div style="display:flex;justify-content:space-between;margin-top:8px;font-family:var(--fm);font-size:11px;color:var(--muted);">
+              <span>&lt; 10k</span><span>&gt; 200k</span>
+            </div>
+          </div>
+        </div>
+        <div class="fr"><label for="fm">Mensaje</label><textarea class="field" id="fm" required placeholder="Cuéntanos brevemente qué necesitas…"></textarea></div>
+        <button type="submit" class="btn btn-p" style="margin-top:12px;">Enviar mensaje <span class="arr">→</span></button>
+        <div class="fok" id="fok">Mensaje recibido. Te escribimos en menos de 24h.</div>
+      </form>
+      <div>
+        <div class="ib reveal d1">
+          <h5>Email</h5><p><a href="mailto:hola@4sens.io">hola@4sens.io</a></p>
+          <h5>Horario</h5><p>Lun–Vie · 9:00–19:00 CET</p>
+          <h5>Respuesta</h5><p>&lt; 24h laborables</p>
+          <h5>Llamada</h5><p><a href="/contacto">Reservar en Calendly →</a></p>
+        </div>
+        <div class="mmap reveal d2"><div class="mpin"></div></div>
+        <p class="muted mono" style="margin-top:12px;font-size:11px;letter-spacing:.08em;">MADRID · BARCELONA · LISBOA</p>
+        <div class="acc reveal d3" style="margin-top:32px;">
+          <div class="accit"><button class="acch" style="padding:18px 0;font-size:18px;">¿Cuánto cuesta un proyecto?<span class="plus">+</span></button><div class="accb"><div class="accbi"><p>Theme custom: 18–45k€. App privada: 12–40k€. Migración: 20–80k€. Plus implementation: 60–180k€.</p></div></div></div>
+          <div class="accit"><button class="acch" style="padding:18px 0;font-size:18px;">¿Trabajáis con retainers?<span class="plus">+</span></button><div class="accb"><div class="accbi"><p>Post-launch sí: retainers de 8h/mes en adelante.</p></div></div></div>
+          <div class="accit"><button class="acch" style="padding:18px 0;font-size:18px;">¿Trabajáis fuera de España?<span class="plus">+</span></button><div class="accb"><div class="accbi"><p>Sí. 40% de clientes en Portugal, Francia, Italia y UK.</p></div></div></div>
+          <div class="accit"><button class="acch" style="padding:18px 0;font-size:18px;">¿Podéis firmar NDA?<span class="plus">+</span></button><div class="accb"><div class="accbi"><p>Antes de cualquier llamada técnica.</p></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
