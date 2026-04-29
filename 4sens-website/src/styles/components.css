@@ -13,7 +13,7 @@
 .hvis .orb.b{inset:12%;animation:rot 28s linear infinite reverse;border-color:rgba(201,245,70,.14)}
 .hvis .orb.c{inset:24%;animation:rot 18s linear infinite;border-style:solid;border-color:rgba(255,255,255,.04)}
 .hvis .cube{position:absolute;inset:28%;transform-style:preserve-3d;animation:sp 16s linear infinite}
-.hvis .fc{position:absolute;inset:0;border:1px solid var(--lime);background:rgba(7,7,10,.65);display:grid;place-items:center;font-family:var(--fd);font-size:48px;font-weight:700;color:var(--lime);letter-spacing:-.04em;backdrop-filter:blur(2px)}
+.hvis .fc{position:absolute;inset:0;border:1px solid var(--lime);background:rgba(7,7,10,.65);display:grid;place-items:center;font-family:var(--fd);font-size:48px;font-weight:700;color:var(--lime);letter-spacing:-.04em;}
 .hvis .fc.fx{transform:rotateY(90deg) translateZ(90px)}
 .hvis .fc.fy{transform:rotateY(-90deg) translateZ(90px)}
 .hvis .fc.fz{transform:translateZ(90px)}
